@@ -22,3 +22,6 @@ urlpatterns = [
     url(r'^blog/', include('blog.urls')),
     url(r'^$', RedirectView.as_view(url='/blog/', permanent=True)),
 ]
+urlpatterns += [
+    url('^accounts/', include('django.contrib.auth.urls')),
+]
